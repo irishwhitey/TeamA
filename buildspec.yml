@@ -11,4 +11,4 @@ phases:
 artifacts:
   files:
     - TeamA/build_output/**/*
-    - TeamA/TeamA/aws-lambda-tools-defaults.json
+    - TeamA/aws-lambda-tools-defaults.json
