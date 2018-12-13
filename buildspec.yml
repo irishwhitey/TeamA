@@ -1,13 +1,13 @@
 version: 0.2
 phases:
-pre_build:
-commands:
-- echo Restore started on `date`
-- dotnet restore TeamA/TeamA.csproj
-build:
-commands:
-- echo Build started on `date`
-- dotnet publish -c release -o ./build_output TeamA/TeamA.csproj
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore TeamA/TeamA.csproj
+  build:
+    commands:
+    - echo Build started on `date`
+    - dotnet publish -c release -o ./build_output TeamA/TeamA.csproj
 artifacts:
-files:
-- /build_output/**/*
+  files:
+    - /build_output/**/*
