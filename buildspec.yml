@@ -10,4 +10,4 @@ phases:
     - dotnet publish -c release -o ./build_output TeamA/TeamA.csproj
 artifacts:
   files:
-    - /build_output/**/*
+    - TeamA/build_output/**/*
