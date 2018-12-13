@@ -8,7 +8,9 @@ phases:
     commands:
     - echo Build started on `date`
     - dotnet publish -c release -o ./build_output TeamA/TeamA.csproj
+    - 
 artifacts:
   files:
-    - TeamA/build_output/**/*
-    - TeamA/aws-lambda-tools-defaults.json
+    - TeamA/build_output/**/*    
+    - appspec.yml
+  discard-paths: yes
