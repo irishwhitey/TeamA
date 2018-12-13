@@ -10,5 +10,4 @@ commands:
 - dotnet publish -c release -o ./build_output TeamA/TeamA.csproj
 artifacts:
 files:
-- CodeBuild-SampleCore/build_output/**/*
-- scripts/**/*
+- /build_output/**/*
