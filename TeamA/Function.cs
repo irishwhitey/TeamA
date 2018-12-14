@@ -21,6 +21,7 @@ namespace TeamA
         /// <returns></returns>
         public string FunctionHandler(ILambdaContext context)
         {
+            context.Logger.Log("in here");
             return "";
         }
     }
