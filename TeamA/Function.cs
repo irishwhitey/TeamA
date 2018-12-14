@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
@@ -19,10 +19,14 @@ namespace TeamA
         /// <param name="input"></param>
         /// <param name="context"></param>
         /// <returns></returns>
-        public string FunctionHandler(ILambdaContext context)
+        public APIGatewayProxyResponse FunctionHandler(ILambdaContext context)
         {
-            context.Logger.Log("in here");
-            return "";
+            context.Logger.Log("Team Message received");
+
+            return new APIGatewayProxyResponse()
+            {
+                Body = "fred"
+            };
         }
     }
 }
