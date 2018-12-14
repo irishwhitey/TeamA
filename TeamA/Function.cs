@@ -25,7 +25,7 @@ namespace TeamA
 
             return new APIGatewayProxyResponse()
             {
-                Body = "fred",StatusCode = 200
+                Body = "{\"name\":\"fred\"}",StatusCode = 200
             };
         }
     }
