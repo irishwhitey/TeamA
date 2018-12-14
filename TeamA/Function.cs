@@ -25,7 +25,7 @@ namespace TeamA
             context.Logger.Log("Received body:" + input.Body);
             return new APIGatewayProxyResponse()
             {
-                Body = "{\"result\":14}",StatusCode = 500
+                Body = "{\"result\":14}",StatusCode = 200
             };
         }
     }
