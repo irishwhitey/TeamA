@@ -19,10 +19,10 @@ namespace TeamA
         /// <param name="input"></param>
         /// <param name="context"></param>
         /// <returns></returns>
-        public APIGatewayProxyResponse FunctionHandler(ILambdaContext context)
+        public APIGatewayProxyResponse FunctionHandler(APIGatewayProxyRequest input,ILambdaContext context)
         {
             context.Logger.Log("Team A Message received");
-
+            context.Logger.Log("Received body:" + input.Body);
             return new APIGatewayProxyResponse()
             {
                 Body = "{\"result\":7}",StatusCode = 200
