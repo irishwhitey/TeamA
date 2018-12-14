@@ -21,11 +21,11 @@ namespace TeamA
         /// <returns></returns>
         public APIGatewayProxyResponse FunctionHandler(ILambdaContext context)
         {
-            context.Logger.Log("Team Message received");
+            context.Logger.Log("Team A Message received");
 
             return new APIGatewayProxyResponse()
             {
-                Body = "{\"name\":\"fred\"}",StatusCode = 200
+                Body = "{\"result\":6}",StatusCode = 200
             };
         }
     }
