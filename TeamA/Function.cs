@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
+using Newtonsoft.Json;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
@@ -23,9 +24,11 @@ namespace TeamA
         {
             context.Logger.Log("Team A Message received");
             context.Logger.Log("Received body:" + input.Body);
+            var request = JsonConvert.DeserializeObject<dynamic>(input.Body);
+            decimal calculatedResult = new Calculator().GetResult(request.problem);
             return new APIGatewayProxyResponse()
             {
-                Body = "{\"result\":7}",StatusCode = 200
+                Body = "{\"result\":" + calculatedResult +"}",StatusCode = 200
             };
         }
     }
