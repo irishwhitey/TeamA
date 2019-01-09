@@ -28,6 +28,22 @@ namespace TeamA
 
                     return toReturn;
                 }
+
+                if (problem.Contains("*"))
+                {
+                    var splitted = problem.Split("*");
+                    toReturn = int.Parse(splitted[0]) * int.Parse(splitted[1]);
+
+                    return toReturn;
+                }
+
+                if (problem.Contains("/"))
+                {
+                    var splitted = problem.Split("/");
+                    toReturn = int.Parse(splitted[0]) / int.Parse(splitted[1]);
+
+                    return toReturn;
+                }
             }
             catch (Exception e)
             {
