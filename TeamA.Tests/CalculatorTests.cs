@@ -24,6 +24,7 @@ namespace TeamA.Tests
         [TestCase("",0)]
         [TestCase("3 + 4", 7)]
         [TestCase("5 + 2 + 1", 8)]
+        [TestCase("8 - 2", 6)]
         public void ItShouldTheCorrectAnswert(string problem, int expectedValue)
         {
             Assert.That(new Calculator().GetResult(problem), Is.EqualTo(expectedValue));
