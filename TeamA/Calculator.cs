@@ -13,10 +13,15 @@ namespace TeamA
                 if (problem.Contains("+"))
                 {
                     var splitted = problem.Split("+");
-                    var first = int.Parse(splitted[0]);
-                    var second = int.Parse(splitted[1]);
+                    for (int i = 0; i < problem.Length; i++)
+                    {
+                        toReturn = int.Parse(splitted[i]) +toReturn;
+                    }
+                    
+                    //var first = int.Parse(splitted[0]);
+                    //var second = int.Parse(splitted[1]);
 
-                    return first + second;
+                    return toReturn;
                 }
             }
             catch (Exception e)
