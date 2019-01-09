@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace TeamA
@@ -6,12 +7,27 @@ namespace TeamA
     {
         public decimal GetResult(string problem)
         {
-            if (problem.Contains("+"))
+            var toReturn = 0;
+            try
             {
-                return 7;
+                if (problem.Contains("+"))
+                {
+                    var splitted = problem.Split("+");
+                    var first = int.Parse(splitted[0]);
+                    var second = int.Parse(splitted[1]);
+
+                    return first + second;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
             }
 
-            return 0;
+            return toReturn;
+
+
+
         }
     }
 }
