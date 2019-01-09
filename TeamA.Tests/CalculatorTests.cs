@@ -14,5 +14,12 @@ namespace TeamA.Tests
             var expected = 0;
             Assert.That(new Calculator().GetResult(""), Is.EqualTo(expected));
         }
+
+        [TestCase("",0)]
+        [TestCase("3 + 4", 7)]
+        public void ItShouldTheCorrectAnswert(string problem, int expectedValue)
+        {
+            Assert.That(new Calculator().GetResult(problem), Is.EqualTo(expectedValue));
+        }
     }
 }
