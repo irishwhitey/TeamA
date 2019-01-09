@@ -10,7 +10,7 @@ namespace TeamA
             var toReturn = 0;
             try
             {
-                if (problem.Contains("+"))
+                if (problem.Contains(" + "))
                 {
                     var splitted = problem.Split("+");
                     for (int i = 0; i < problem.Length; i++)
