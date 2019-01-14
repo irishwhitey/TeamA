@@ -16,6 +16,13 @@ namespace TeamA.Tests
         }
 
         [Test]
+        public void adding3numberstogther()
+        {
+            var expected = 9;
+            Assert.That(new Calculator().GetResult("3 + 4 + 2"), Is.EqualTo(expected));
+        }
+
+        [Test]
         public void ItShouldNotBreak()
         {
             new Calculator().GetResult("fred + ");
