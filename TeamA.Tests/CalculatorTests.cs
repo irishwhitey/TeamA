@@ -30,7 +30,13 @@ namespace TeamA.Tests
         {
             Assert.That(new Calculator().GetResult("-3 + 4"), Is.EqualTo(1));
         }
-        
+
+        [Test]
+        public void candividenumbers()
+        {
+            Assert.That(new Calculator().GetResult("8 / 4"), Is.EqualTo(2));
+        }
+
         [Test]
         public void ItShouldNotBreak()
         {

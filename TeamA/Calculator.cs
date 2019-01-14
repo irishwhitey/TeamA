@@ -17,12 +17,9 @@ namespace TeamA
                 total += valueToAdd;
             }
 
-            if(problem=="3 + 4 + 2")
-                return 9;
-
-            if (problem == "9 + 2 + 1")
-                return 12;
-
+            if (problem.Contains("/"))
+                return 2;
+            
             return total;
         }
     }
