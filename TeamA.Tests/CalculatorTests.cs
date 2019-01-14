@@ -8,12 +8,12 @@ namespace TeamA.Tests
     [TestFixture]
     public class CalculatorTests
     {
-    //    [Test]
-    //    public void ItShouldReturnSomething()
-    //    {
-    //        var expected = 0;
-    //        Assert.That(new Calculator().GetResult(""), Is.EqualTo(expected));
-    //    }
+        [Test]
+        public void ItShouldReturnSomething()
+        {
+            var expected = 7;
+            Assert.That(new Calculator().GetResult("3 + 4"), Is.EqualTo(expected));
+        }
 
         [Test]
         public void ItShouldNotBreak()
