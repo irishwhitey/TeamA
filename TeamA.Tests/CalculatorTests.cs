@@ -38,6 +38,12 @@ namespace TeamA.Tests
         }
 
         [Test]
+        public void canmultiplynumbers()
+        {
+            Assert.That(new Calculator().GetResult("2 * 4"), Is.EqualTo(8));
+        }
+
+        [Test]
         public void ItShouldNotBreak()
         {
             new Calculator().GetResult("fred + ");
