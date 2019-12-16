@@ -7,7 +7,7 @@ namespace TeamA
     {
         public decimal GetResult(string problem)
         {
-            return 7;
+            return 100;
         }
     }
 }
