@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
@@ -26,6 +27,7 @@ namespace TeamA
             context.Logger.Log("Received body:" + input.Body);
             var request = JsonConvert.DeserializeObject<dynamic>(input.Body);
             decimal calculatedResult = new Calculator().GetResult((string)request.problem);
+            Thread.Sleep(60000);
             return new APIGatewayProxyResponse()
             {
                 Body = "{\"result\":" + calculatedResult + "}",
