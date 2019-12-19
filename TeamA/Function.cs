@@ -29,7 +29,7 @@ namespace TeamA
             return new APIGatewayProxyResponse()
             {
                 Body = "{\"result\":" + calculatedResult + "}",
-                StatusCode = 200
+                StatusCode = 500
             };
 
 
