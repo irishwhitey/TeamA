@@ -26,7 +26,7 @@ namespace TeamA.Tests
         public void ItShouldAddThreeNumbers()
         {
             var expected = 6;
-            Assert.That(new Calculator().GetResult("2 + 2 + 1"), Is.EqualTo(expected));
+            Assert.That(new Calculator().GetResult("3 + 2 + 1"), Is.EqualTo(expected));
         }
     }
 }

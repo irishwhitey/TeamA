@@ -15,15 +15,19 @@ namespace TeamA
 
                 var numbers = GetNumberComponents(splitProblem);
 
-                var num1 = numbers[0];
-                var num2 = numbers[1];
+                var result = AddNumbers(numbers);
 
-                return num1 + num2;
+                return result;
             }
             catch (Exception ex)
             {
                 return 0;
             }
+        }
+
+        private decimal AddNumbers(decimal[] numbers)
+        {
+            return numbers.Select(num => num).Sum();
         }
 
         private decimal[] GetNumberComponents(string[] problemComponents)
@@ -42,5 +46,7 @@ namespace TeamA
 
             return numbers.ToArray();
         }
+
+
     }
 }
