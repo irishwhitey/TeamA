@@ -24,6 +24,8 @@ namespace TeamA
                         return SubtractNumbers(numbers);
                     case "*":
                         return MultiplyNumbers(numbers);
+                    case "/":
+                        return DivideNumbers(numbers);
                 }
 
                 var result = AddNumbers(numbers);
@@ -63,6 +65,16 @@ namespace TeamA
             if (numbers.Length < 3)
             {
                return numbers[0] * numbers[1];
+            }
+
+            return 0;
+        }
+
+        private decimal DivideNumbers(decimal[] numbers)
+        {
+            if (numbers.Length < 3)
+            {
+                return numbers[0] / numbers[1];
             }
 
             return 0;

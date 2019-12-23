@@ -44,10 +44,16 @@ namespace TeamA.Tests
         }
 
         [Test]
-        public void ItShouldSubtractMultiplyTwoNumbers()
+        public void ItShouldMultiplyTwoNumbers()
         {
             var expected = 6;
             Assert.That(new Calculator().GetResult("3 * 2"), Is.EqualTo(expected));
+        }
+        [Test]
+        public void ItShouldDivideTwoNumbers()
+        {
+            var expected = 3;
+            Assert.That(new Calculator().GetResult("6 / 2"), Is.EqualTo(expected));
         }
     }
 }
