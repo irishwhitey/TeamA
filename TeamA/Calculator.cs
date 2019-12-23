@@ -22,6 +22,8 @@ namespace TeamA
                         return AddNumbers(numbers);
                     case "-":
                         return SubtractNumbers(numbers);
+                    case "*":
+                        return MultiplyNumbers(numbers);
                 }
 
                 var result = AddNumbers(numbers);
@@ -54,6 +56,16 @@ namespace TeamA
         private decimal AddNumbers(decimal[] numbers)
         {
             return numbers.Select(num => num).Sum();
+        }
+
+        private decimal MultiplyNumbers(decimal[] numbers)
+        {
+            if (numbers.Length < 3)
+            {
+               return numbers[0] * numbers[1];
+            }
+
+            return 0;
         }
 
         private decimal SubtractNumbers(decimal[] numbers)
