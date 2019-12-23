@@ -14,6 +14,15 @@ namespace TeamA
                 string[] splitProblem = problem.Split(new char[] { ' ' });
 
                 var numbers = GetNumberComponents(splitProblem);
+                var calcOperator = GetOperator(splitProblem)[0];
+
+                switch (calcOperator)
+                {
+                    case "+":
+                        return AddNumbers(numbers);
+                    case "-":
+                        return SubtractNumbers(numbers);
+                }
 
                 var result = AddNumbers(numbers);
 
@@ -25,9 +34,38 @@ namespace TeamA
             }
         }
 
+        private string[] GetOperator(string[] problemComponents)
+        {
+            IList<string> operators = new List<string>();
+
+            foreach (var component in problemComponents)
+            {
+                decimal parseResult = 0;
+
+                if (!decimal.TryParse(component, out parseResult))
+                {
+                    operators.Add(component);
+                }
+            }
+
+            return operators.ToArray();
+        }
+
         private decimal AddNumbers(decimal[] numbers)
         {
             return numbers.Select(num => num).Sum();
+        }
+
+        private decimal SubtractNumbers(decimal[] numbers)
+        {
+            var total = numbers[0];
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                total -= numbers[i];
+            }
+
+            return total;
         }
 
         private decimal[] GetNumberComponents(string[] problemComponents)
