@@ -16,10 +16,17 @@ namespace TeamA.Tests
         }
 
         [Test]
-        public void ItShouldAddNumbers()
+        public void ItShouldAddTwoNumbers()
         {
             var expected = 9;
             Assert.That(new Calculator().GetResult("5 + 4"), Is.EqualTo((expected)));
+        }
+
+        [Test]
+        public void ItShouldAddThreeNumbers()
+        {
+            var expected = 6;
+            Assert.That(new Calculator().GetResult("2 + 2 + 1"), Is.EqualTo(expected));
         }
     }
 }
