@@ -9,7 +9,7 @@ Resources:
       FunctionName: TeamAFunction      
       Handler: TeamA::TeamA.Function::FunctionHandler
       Runtime: dotnetcore2.1
-      CodeUri: TeamA/build_output/
+      CodeUri: build_output
       Timeout: 30
       Events:
         GetResource:
