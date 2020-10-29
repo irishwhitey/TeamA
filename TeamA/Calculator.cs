@@ -9,9 +9,15 @@ namespace TeamA
     {
         public decimal GetResult(string problem)
         {
+
             try
             {
-                int.Parse(problem);
+                if (problem.Contains("^"))
+                {
+                    var splited = problem.Split("^");
+                    var res2 = Math.Pow(double.Parse(splited[0]), double.Parse(splited[1]));
+                    return Convert.ToDecimal(res2);
+                }
 
             }
             catch (Exception e)
@@ -19,6 +25,7 @@ namespace TeamA
 
             }
             return -99;
+
         }
     }
 }

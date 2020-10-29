@@ -15,5 +15,12 @@ namespace TeamA.Tests
             Assert.That(-99, Is.EqualTo(defaultResult));
         }
 
+        [Test]
+        public void ItShouldHandlePower()
+        {
+            decimal result = new Calculator().GetResult("2 ^ 3");
+            Assert.That(8, Is.EqualTo(result));
+        }
+
     }
 }
