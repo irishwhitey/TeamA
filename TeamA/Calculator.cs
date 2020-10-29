@@ -28,6 +28,11 @@ namespace TeamA
                     var splited = problem.Split("-");
                     return decimal.Parse(splited[0]) - decimal.Parse(splited[1]);
                 }
+                if (problem.Contains("*"))
+                {
+                    var splited = problem.Split("*");
+                    return decimal.Parse(splited[0]) * decimal.Parse(splited[1]);
+                }
 
             }
             catch (Exception e)

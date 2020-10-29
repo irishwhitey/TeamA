@@ -35,5 +35,12 @@ namespace TeamA.Tests
             Assert.That(3, Is.EqualTo(result));
         }
 
+        [Test]
+        public void ItShouldHandleBasicMultiply()
+        {
+            decimal result = new Calculator().GetResult("5 * 2");
+            Assert.That(10, Is.EqualTo(result));
+        }
+
     }
 }
