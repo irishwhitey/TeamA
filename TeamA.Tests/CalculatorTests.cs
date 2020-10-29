@@ -42,5 +42,12 @@ namespace TeamA.Tests
             Assert.That(10, Is.EqualTo(result));
         }
 
+        [Test]
+        public void ItShouldHandleBasicDivide()
+        {
+            decimal result = new Calculator().GetResult("6 / 2");
+            Assert.That(3, Is.EqualTo(result));
+        }
+
     }
 }
