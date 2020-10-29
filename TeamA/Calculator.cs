@@ -21,7 +21,13 @@ namespace TeamA
                 if (problem.Contains("+"))
                 {
                     var splited = problem.Split("+");
-                    return decimal.Parse(splited[0]) + decimal.Parse(splited[1]);
+                    var result = 0;
+                    foreach (var spl in splited)
+                    {
+                        result += int.Parse(spl);
+                    }
+
+                    return result;
                 }
                 if (problem.Contains("-"))
                 {

@@ -49,5 +49,12 @@ namespace TeamA.Tests
             Assert.That(3, Is.EqualTo(result));
         }
 
+        [Test]
+        public void ItShouldHandlMultipleAdd()
+        {
+            decimal result = new Calculator().GetResult("1 + 2 + 3");
+            Assert.That(6, Is.EqualTo(result));
+        }
+
     }
 }
