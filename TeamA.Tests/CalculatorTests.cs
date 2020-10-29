@@ -28,5 +28,12 @@ namespace TeamA.Tests
             Assert.That(5, Is.EqualTo(result));
         }
 
+        [Test]
+        public void ItShouldHandleBasicSubtraction()
+        {
+            decimal result = new Calculator().GetResult("5 - 2");
+            Assert.That(3, Is.EqualTo(result));
+        }
+
     }
 }
