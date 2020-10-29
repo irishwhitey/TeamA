@@ -21,6 +21,12 @@ namespace TeamA.Tests
             decimal result = new Calculator().GetResult("2 ^ 3");
             Assert.That(8, Is.EqualTo(result));
         }
+        [Test]
+        public void ItShouldHandleBasicAddition()
+        {
+            decimal result = new Calculator().GetResult("2 + 3");
+            Assert.That(5, Is.EqualTo(result));
+        }
 
     }
 }

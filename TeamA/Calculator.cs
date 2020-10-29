@@ -18,6 +18,13 @@ namespace TeamA
                     var res2 = Math.Pow(double.Parse(splited[0]), double.Parse(splited[1]));
                     return Convert.ToDecimal(res2);
                 }
+                if (problem.Contains("+"))
+                {
+                    var splited = problem.Split("+");
+                    return decimal.Parse(splited[0]) + decimal.Parse(splited[1]);
+                }
+
+
 
             }
             catch (Exception e)
