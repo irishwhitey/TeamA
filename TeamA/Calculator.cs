@@ -9,7 +9,16 @@ namespace TeamA
     {
         public decimal GetResult(string problem)
         {
-            return -3;
+            try
+            {
+                int.Parse(problem);
+
+            }
+            catch (Exception e)
+            {
+
+            }
+            return -99;
         }
     }
 }
